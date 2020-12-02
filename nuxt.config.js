@@ -30,7 +30,9 @@ export default {
    ** Global CSS
    */
   css: [
-    '~/assets/scss/style.scss'
+    /* Import Bootstrap Vue Styles */
+    '~/node_modules/bootstrap-vue/dist/bootstrap-vue.css',
+    { src:'~/assets/scss/style.scss', lang: 'scss' }
   ],
   /*
    ** Plugins to load before mounting the App
@@ -55,6 +57,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'bootstrap-vue/nuxt'
   ],
   /*
    ** Axios module configuration
