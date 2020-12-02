@@ -30,7 +30,7 @@
         </CHeaderNavLink>
       </CHeaderNavItem>
     </CHeaderNav>
-    <CHeaderNav class="mr-4">
+    <!-- <CHeaderNav class="mr-4">
       <CHeaderNavItem class="d-md-down-none mx-2">
         <CHeaderNavLink>
           <CIcon name="cil-bell"/>
@@ -46,8 +46,8 @@
           <CIcon name="cil-envelope-open"/>
         </CHeaderNavLink>
       </CHeaderNavItem>
-      <!-- <TheHeaderDropdownAccnt/> -->
-    </CHeaderNav>
+     <TheHeaderDropdownAccnt/>
+    </CHeaderNav> -->
     <CSubheader class="px-3">
       <CBreadcrumbRouter class="border-0 mb-0"/>
     </CSubheader>
