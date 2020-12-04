@@ -11,7 +11,7 @@ import UIContainer from '~/components/UIContainer'
 
 export default {
   name: 'Default',
-  middleware: 'authenticated',
+  middleware: ['authenticated', 'dashboard'],
   components: {
     UIContainer
   }
