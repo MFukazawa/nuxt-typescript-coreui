@@ -11,7 +11,6 @@ export const mutations = {
   },
   toggleSidebarMobile (state) {
     const sidebarClosed = [false, 'responsive'].includes(state.sidebarShow)
-    console.log(sidebarOpened)
     state.sidebarShow = sidebarClosed ? true : 'responsive'
   },
   set (state, [variable, value]) {
