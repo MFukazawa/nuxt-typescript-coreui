@@ -1,15 +1,17 @@
 <template>
-  <client-only>
+  <!-- <client-only> -->
     <UIContainer>
       <!-- <Nuxt /> -->
     </UIContainer>
-  </client-only>
+  <!-- </client-only> -->
 </template>
 
 <script>
 import UIContainer from '~/components/UIContainer'
 
 export default {
+  name: 'Default',
+  middleware: 'authenticated',
   components: {
     UIContainer
   }

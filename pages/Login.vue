@@ -69,7 +69,7 @@ export default {
   methods: {
     ...mapMutations(['login']),
     loginAndRedirect() {
-      this.login();
+      this.login()
       this.$router.push('/')
     }
   }
