@@ -1,6 +1,5 @@
 export default function({ store, redirect }) {
-  if (store.state.isLogin === false) {
-    console.log('[Middleware] authenticated');
+  if (!store.state.isLogin) {
     return redirect('/login')
   }
 }
