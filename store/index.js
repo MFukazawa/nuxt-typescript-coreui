@@ -1,6 +1,7 @@
 export const state = () => ({
   sidebarShow: 'responsive',
-  sidebarMinimize: false
+  sidebarMinimize: false,
+  isLogin: false
 })
 
 export const mutations = {
@@ -15,5 +16,11 @@ export const mutations = {
   },
   set (state, [variable, value]) {
     state[variable] = value
+  },
+  login (state) {
+    state.isLogin = true
+  },
+  logout (state) {
+    state.isLogin = false
   }
 }
