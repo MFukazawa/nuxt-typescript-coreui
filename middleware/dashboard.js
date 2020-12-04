@@ -1,4 +1,4 @@
-export default function ({ params, route, redirect }) {
+export default function ({ route, redirect }) {
   if (route.path === '/') {
     return redirect('/dashboard')
   }
