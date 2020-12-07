@@ -850,16 +850,17 @@
 </template>
 
 <script lang="ts">
-import CardLine1ChartExample from '~/components/dashboard/CardLine1ChartExample'
-import CardLine2ChartExample from '~/components/dashboard/CardLine2ChartExample'
-import CardLine3ChartExample from '~/components/dashboard/CardLine3ChartExample'
-import CardBarChartExample from '~/components/dashboard/CardBarChartExample'
-import MainChartExample from '~/components/dashboard/MainChartExample'
-import SocialBoxChartExample from '~/components/dashboard/SocialBoxChartExample'
-import CalloutChartExample from '~/components/dashboard/CalloutChartExample'
-import Callout from '~/components/Callout'
+import Vue from 'vue'
+import CardLine1ChartExample from '~/components/dashboard/CardLine1ChartExample.vue'
+import CardLine2ChartExample from '~/components/dashboard/CardLine2ChartExample.vue'
+import CardLine3ChartExample from '~/components/dashboard/CardLine3ChartExample.vue'
+import CardBarChartExample from '~/components/dashboard/CardBarChartExample.vue'
+import MainChartExample from '~/components/dashboard/MainChartExample.vue'
+import SocialBoxChartExample from '~/components/dashboard/SocialBoxChartExample.vue'
+import CalloutChartExample from '~/components/dashboard/CalloutChartExample.vue'
+import Callout from '~/components/Callout.vue'
 
-export default {
+export default Vue.extend({
   name: 'Dashboard',
   components: {
     Callout,
@@ -1004,5 +1005,5 @@ export default {
       return $color
     },
   },
-}
+})
 </script>

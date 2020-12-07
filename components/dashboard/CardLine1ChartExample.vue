@@ -1,4 +1,6 @@
 <script>
+import Vue from 'vue'
+// import Component from '@nuxt/types'
 import { Line } from 'vue-chartjs'
 
 const brandPrimary = '#20a8d8'

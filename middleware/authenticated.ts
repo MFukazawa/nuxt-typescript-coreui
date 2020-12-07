@@ -1,6 +1,6 @@
-import { Middleware } from '@nuxt/types'
+import { Middleware, Context } from '@nuxt/types'
 
-const authenticated: Middleware = ({ store, redirect }) => {
+const authenticated: Middleware = ({ store, redirect }: Context) => {
   if (!store.state.isLogin) {
     return redirect('/login')
   }

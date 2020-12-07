@@ -1,4 +1,5 @@
 <script>
+import Vue from 'vue'
 import { Line } from 'vue-chartjs'
 
 // const brandPrimary = '#20a8d8'
@@ -7,20 +8,20 @@ import { Line } from 'vue-chartjs'
 // const brandWarning = '#f8cb00'
 // const brandDanger = '#f86c6b'
 
-export default {
+export default Vue.extend({
   extends: Line,
   props: {
     data: {
-      type: Object,
-      default: null
+      type: Array,
+      default: []
     },
     height: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     width: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     variant: {
       type: String,
@@ -79,5 +80,5 @@ export default {
       }
     )
   },
-}
+})
 </script>
