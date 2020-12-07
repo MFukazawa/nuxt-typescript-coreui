@@ -44,6 +44,7 @@ export default {
     /* Import Bootstrap Vue Styles */
     '~/node_modules/bootstrap-vue/dist/bootstrap-vue.css',
     { src: '~/assets/scss/style.scss', lang: 'scss' },
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -52,6 +53,7 @@ export default {
   plugins: [
     { src: '~/plugins/coreui', ssr: false },
     { src: '~/plugins/coreui-icons', ssr: false },
+    { src: '~/plugins/fontawesome', srr: false }
   ],
   /*
    ** Auto import components
@@ -61,7 +63,10 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/style-resources'
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -85,7 +90,33 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    /*
+    ** You can extend webpack config here
+    */
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /(node_modules)/
+        // })
+
+        const vueLoader = config.module.rules.find(
+          ({loader}) => loader === 'vue-loader')
+        const { options: {loaders} } = vueLoader || { options: {} }
+
+        if (loaders) {
+          for (const loader of Object.values(loaders)) {
+            changeLoaderOptions(Array.isArray(loader) ? loader : [loader])
+          }
+        }
+
+        config.module.rules.forEach(rule => changeLoaderOptions(rule.use))
+      }
+    }
+  },
   router: {
     middleware: 'dashboard',
   },

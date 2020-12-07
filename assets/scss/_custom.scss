@@ -2,3 +2,75 @@
 .text-lg {
   font-size: large;
 }
+
+.social-box {
+  min-height: 160px;
+  margin-bottom: 2 * $card-spacer-y;
+  text-align: center;
+  background: #fff;
+  border: $card-border-width solid $card-border-color;
+  @include border-radius($card-border-radius);
+
+  svg {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38px;
+    color: white;
+  }
+
+  ul {
+    padding: 10px 0;
+    list-style: none;
+
+
+    li {
+      display: block;
+      float: left;
+      width: 50%;
+
+      &:first-child {
+        border-right: 1px solid $border-color;
+      }
+
+      strong {
+        display: block;
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: 500;
+        color: $border-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+
+  &.facebook {
+    .chart-wrapper {
+      background-color: $facebook;
+    }
+  }
+
+  &.twitter {
+    .chart-wrapper {
+      background-color: $twitter;
+    }
+  }
+
+  &.linkedin {
+    .chart-wrapper {
+      background-color: $linkedin;
+    }
+  }
+
+  &.google-plus {
+    .chart-wrapper {
+      background-color: $google-plus;
+    }
+  }
+}
+
