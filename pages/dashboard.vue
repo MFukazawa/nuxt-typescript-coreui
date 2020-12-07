@@ -788,7 +788,7 @@
                 <div class="small text-muted">Last login</div>
                 <strong>{{item.activity}}</strong>
               </td>
-            </CDataTable>
+          </CDataTable>
 
           <!-- <b-table
             class="mb-0 table-outline"
@@ -862,7 +862,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import CardLine1ChartExample from '~/components/dashboard/CardLine1ChartExample'
 import CardLine2ChartExample from '~/components/dashboard/CardLine2ChartExample'
 import CardLine3ChartExample from '~/components/dashboard/CardLine3ChartExample'
@@ -888,18 +888,6 @@ export default {
     return {
       selected: 'Month',
       tableItems: [
-        // {
-        //   avatar: 'img/avatars/1.jpg',
-        //   user: {
-        //     name: 'Yiorgos Avraamu',
-        //     new: true,
-        //     registered: 'Jan 1, 2015',
-        //   },
-        //   country: { name: 'USA', flag: 'us' },
-        //   usage: { value: 50, period: 'Jun 11, 2015 - Jul 10, 2015' },
-        //   payment: { name: 'Mastercard', icon: 'fa fa-cc-mastercard' },
-        //   activity: '10 sec ago',
-        // },
         {
           avatar: { url: 'img/avatars/1.jpg', status: 'success' },
           user: {
