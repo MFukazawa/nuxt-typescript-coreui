@@ -24,7 +24,6 @@
     padding: 10px 0;
     list-style: none;
 
-
     li {
       display: block;
       float: left;
@@ -47,7 +46,6 @@
       }
     }
   }
-
 
   &.facebook {
     .chart-wrapper {
@@ -74,3 +72,365 @@
   }
 }
 
+.horizontal-bars {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+
+    .title {
+      width: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: $text-muted;
+      vertical-align: middle;
+    }
+
+    .bars {
+      position: absolute;
+      top: 15px;
+      width: 100%;
+      padding-left: 100px;
+
+      .progress:first-child {
+        margin-bottom: 2px;
+      }
+    }
+
+    &.legend {
+      text-align: center;
+
+      .badge {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+      }
+    }
+
+    &.divider {
+      height: 40px;
+
+      i {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  &.type-2 {
+    li {
+      overflow: hidden;
+
+      i {
+        display: inline-block;
+        margin-right: $spacer;
+        margin-left: 5px;
+        font-size: 18px;
+        line-height: 40px;
+      }
+
+      .title {
+        display: inline-block;
+        width: auto;
+        margin-top: -9px;
+        font-size: $font-size-base;
+        font-weight: normal;
+        line-height: 40px;
+        color: $body-color;
+      }
+
+      .value {
+        float: right;
+        font-weight: 600;
+      }
+
+      .bars {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.icons-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    height: 40px;
+    vertical-align: middle;
+
+    i {
+      display: block;
+      float: left;
+      width: 35px !important;
+      height: 35px !important;
+      margin: 2px;
+      line-height: 35px !important;
+      text-align: center;
+    }
+
+    .desc {
+      height: 40px;
+      margin-left: 50px;
+      border-bottom: 1px solid $border-color;
+
+      .title {
+        padding: 2px 0 0;
+        margin: 0;
+      }
+      small {
+        display: block;
+        margin-top: -4px;
+        color: $text-muted;
+      }
+    }
+
+    .value {
+      position: absolute;
+      top: 2px;
+      right: 45px;
+      text-align: right;
+
+      strong {
+        display: block;
+        margin-top: -3px;
+      }
+    }
+
+    .actions {
+      position: absolute;
+      top: -4px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+
+      i {
+        float: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        line-height: normal;
+      }
+    }
+
+    &.divider {
+      height: 40px;
+
+      i {
+        width: auto;
+        height: auto;
+        margin: 2px 0 0;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* ====================== CARD ============================*/
+.card {
+  margin-bottom: 1.5 * $spacer;
+
+  // Cards with color accent
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+      border-color: darken($value, 12.5%);
+      .card-header {
+        background-color: darken($value, 3%);
+        border-color: darken($value, 12.5%);
+      }
+    }
+  }
+}
+
+.text-white .text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.card-header {
+  .icon-bg {
+    display: inline-block;
+    padding: $card-spacer-y $card-spacer-x !important;
+    margin-top: -$card-spacer-y;
+    margin-right: $card-spacer-x;
+    margin-bottom: -$card-spacer-y;
+    margin-left: -$card-spacer-x;
+    line-height: inherit;
+    color: $card-icon-color;
+    vertical-align: bottom;
+    background: $card-icon-bg;
+    border-right: $card-border-width solid $card-border-color;
+  }
+
+  .nav.nav-tabs {
+    margin-top: -$card-spacer-y;
+    margin-bottom: -$card-spacer-y;
+    border-bottom: 0;
+
+    .nav-item {
+      border-top: 0;
+    }
+
+    .nav-link {
+      padding: $card-spacer-y $card-spacer-x / 2;
+      color: $text-muted;
+      border-top: 0;
+
+      &.active {
+        color: $body-color;
+        background: #fff;
+      }
+    }
+  }
+
+  &.card-header-inverse {
+    color: #fff;
+  }
+
+  .btn {
+    margin-top: -$input-btn-padding-y;
+  }
+  .btn-sm {
+    margin-top: -$input-btn-padding-y-sm;
+  }
+  .btn-lg {
+    margin-top: -$input-btn-padding-y-lg;
+  }
+}
+
+.card-footer {
+  ul {
+    display: table;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    table-layout: fixed;
+
+    li {
+      display: table-cell;
+      padding: 0 $card-spacer-x;
+      text-align: center;
+    }
+  }
+}
+
+[class*='card-outline-'] {
+  .card-body {
+    background: #fff !important;
+  }
+
+  &.card-outline-top {
+    border-top-width: 2px;
+    border-right-color: $border-color;
+    border-bottom-color: $border-color;
+    border-left-color: $border-color;
+  }
+}
+
+// Cards with color accent
+@each $color, $value in $theme-colors {
+  .card-accent-#{$color} {
+    @include card-accent-variant($value);
+  }
+}
+
+// Card Actions
+.card-header {
+  > i {
+    margin-right: $spacer / 2;
+  }
+  .card-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    //height: inherit;
+
+    a,
+    button {
+      display: block;
+      float: left;
+      width: 50px;
+      padding: $card-spacer-y 0;
+      margin: 0 !important;
+      color: $body-color;
+      text-align: center;
+      background: transparent;
+      border: 0;
+      border-left: 1px solid $border-color;
+      box-shadow: 0;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      [class^='icon-'],
+      [class*=' icon-'] {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      i {
+        display: inline-block;
+        transition: 0.4s;
+      }
+
+      .r180 {
+        transform: rotate(180deg);
+      }
+    }
+
+    .input-group {
+      width: 230px;
+      margin: 6px;
+
+      .input-group-prepend,
+      .input-group-append {
+        background: #fff;
+      }
+
+      input {
+        border-left: 0;
+      }
+    }
+  }
+}
+
+.card-full {
+  margin-top: -$spacer;
+  margin-right: -$grid-gutter-width / 2;
+  margin-left: -$grid-gutter-width / 2;
+  border: 0;
+  border-bottom: $card-border-width solid $border-color;
+}
+
+@include media-breakpoint-up(sm) {
+  .card-columns {
+    &.cols-2 {
+      column-count: 2;
+    }
+  }
+}
+
+.card {
+  &.drag,
+  .drag {
+    cursor: move;
+  }
+}
+
+.card-placeholder {
+  background: rgba(0, 0, 0, 0.025);
+  border: 1px dashed $gray-300;
+}
