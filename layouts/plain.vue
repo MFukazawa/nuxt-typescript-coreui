@@ -1,17 +1,13 @@
 <template>
   <div>
     <!-- <client-only> -->
-      <Nuxt />
+    <Nuxt />
     <!-- </client-only> -->
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
-<style>
-
-</style>
+<style></style>

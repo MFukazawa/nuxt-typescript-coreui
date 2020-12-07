@@ -23,23 +23,21 @@ import usersData from '~/assets/UsersData'
 export default {
   components: { CTableWrapper },
   methods: {
-    shuffleArray (array) {
+    shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1))
-        let temp = array[i]
+        const j = Math.floor(Math.random() * (i + 1))
+        const temp = array[i]
         array[i] = array[j]
         array[j] = temp
       }
       return array
     },
 
-    getShuffledUsersData () {
+    getShuffledUsersData() {
       return this.shuffleArray(usersData.slice(0))
-    }
-  }
+    },
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

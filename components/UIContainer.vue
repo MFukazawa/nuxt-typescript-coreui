@@ -25,8 +25,8 @@ import TheHeader from '~/components/nav/TheHeader'
 export default {
   components: {
     TheSidebar,
-    TheHeader
-  }
+    TheHeader,
+  },
 }
 </script>
 

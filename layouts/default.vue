@@ -1,8 +1,8 @@
 <template>
   <!-- <client-only> -->
-    <UIContainer>
-      <!-- <Nuxt /> -->
-    </UIContainer>
+  <UIContainer>
+    <!-- <Nuxt /> -->
+  </UIContainer>
   <!-- </client-only> -->
 </template>
 
@@ -13,8 +13,8 @@ export default {
   name: 'Default',
   middleware: ['authenticated', 'dashboard'],
   components: {
-    UIContainer
-  }
+    UIContainer,
+  },
 }
 </script>
 
@@ -38,5 +38,4 @@ export default {
   box-sizing: border-box;
   margin: 0;
 } */
-
 </style>

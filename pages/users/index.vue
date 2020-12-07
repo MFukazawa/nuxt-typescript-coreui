@@ -12,11 +12,9 @@ import EmployeesTable from './employees'
 export default {
   components: {
     CustomersTable,
-    EmployeesTable
-  }
+    EmployeesTable,
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

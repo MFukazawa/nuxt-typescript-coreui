@@ -3,32 +3,32 @@
     <b-card-group columns class="card-columns cols-2">
       <b-card header="Line Chart">
         <div class="chart-wrapper">
-          <line-example/>
+          <line-example />
         </div>
       </b-card>
       <b-card header="Bar Chart">
         <div class="chart-wrapper">
-          <bar-example/>
+          <bar-example />
         </div>
       </b-card>
       <b-card header="Doughnut Chart">
         <div class="chart-wrapper">
-          <doughnut-example/>
+          <doughnut-example />
         </div>
       </b-card>
       <b-card header="Radar Chart">
         <div class="chart-wrapper">
-          <radar-example/>
+          <radar-example />
         </div>
       </b-card>
       <b-card header="Pie Chart">
         <div class="chart-wrapper">
-          <pie-example/>
+          <pie-example />
         </div>
       </b-card>
       <b-card header="Polar Area Chart">
         <div class="chart-wrapper">
-          <polar-area-example/>
+          <polar-area-example />
         </div>
       </b-card>
     </b-card-group>
@@ -44,14 +44,14 @@ import PieExample from '~/components/charts/PieExample'
 import PolarAreaExample from '~/components/charts/PolarAreaExample'
 
 export default {
-  name: 'charts',
+  name: 'Charts',
   components: {
     BarExample,
     LineExample,
     DoughnutExample,
     RadarExample,
     PieExample,
-    PolarAreaExample
-  }
+    PolarAreaExample,
+  },
 }
 </script>

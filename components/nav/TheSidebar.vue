@@ -27,13 +27,12 @@ export default {
   name: 'TheSidebar',
   nav,
   computed: {
-    show () {
+    show() {
       return this.$store.state.sidebarShow
     },
-    minimize () {
+    minimize() {
       return this.$store.state.sidebarMinimize
-    }
-  }
+    },
+  },
 }
 </script>
-

@@ -1,8 +1,6 @@
 <template>
   <div>
-    <basic-form>
-      クレジットカード情報
-    </basic-form>
+    <basic-form> クレジットカード情報 </basic-form>
   </div>
 </template>
 
@@ -11,12 +9,9 @@ import BasicForm from '~/components/forms/BasicForm.vue'
 
 export default {
   components: {
-    BasicForm
-  }
-
+    BasicForm,
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -9,8 +9,8 @@ export default [
         icon: 'cil-speedometer',
         badge: {
           color: 'primary',
-          text: 'NEW'
-        }
+          text: 'NEW',
+        },
       },
       // {
       //   _name: 'CSidebarNavTitle',
@@ -31,7 +31,7 @@ export default [
       {
         _name: 'CSidebarNavTitle',
         _children: ['機能一覧'],
-        _class: 'text-lg'
+        _class: 'text-lg',
       },
       {
         _name: 'CSidebarNavDropdown',
@@ -42,14 +42,14 @@ export default [
         items: [
           {
             name: '従業員',
-            to: '/users/employees'
+            to: '/users/employees',
           },
           {
             name: 'お客様',
-            to: '/users/customers'
-          }
-        ]
-      }
+            to: '/users/customers',
+          },
+        ],
+      },
       // {
       //   _name: 'CSidebarNavDropdown',
       //   name: 'Buttons',
@@ -183,6 +183,6 @@ export default [
       //   _class: 'bg-danger text-white',
       //   target: '_blank'
       // }
-    ]
-  }
+    ],
+  },
 ]

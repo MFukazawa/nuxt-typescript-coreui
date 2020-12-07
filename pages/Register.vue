@@ -33,10 +33,7 @@
                     ><CIcon name="cil-lock-locked"
                   /></template>
                 </CInput>
-                <CButton
-                  color="success"
-                  block
-                  @click="$router.push('/')"
+                <CButton color="success" block @click="$router.push('/')"
                   >Create Account</CButton
                 >
               </CForm>
