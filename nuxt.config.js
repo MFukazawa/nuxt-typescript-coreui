@@ -1,9 +1,20 @@
+const changeLoaderOptions = (loaders) => {
+  if (loaders) {
+    for (const loader of loaders) {
+      if (loader.loader === 'sass-loader') {
+        Object.assign(loader.options, {
+          includePaths: ['./assets'],
+        })
+      }
+    }
+  }
+}
+
 export default {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'universal',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -32,7 +43,7 @@ export default {
   css: [
     /* Import Bootstrap Vue Styles */
     '~/node_modules/bootstrap-vue/dist/bootstrap-vue.css',
-    { src:'~/assets/scss/style.scss', lang: 'scss' }
+    { src: '~/assets/scss/style.scss', lang: 'scss' },
   ],
   /*
    ** Plugins to load before mounting the App
@@ -40,7 +51,7 @@ export default {
    */
   plugins: [
     { src: '~/plugins/coreui', ssr: false },
-    { src: '~/plugins/coreui-icons', ssr: false }
+    { src: '~/plugins/coreui-icons', ssr: false },
   ],
   /*
    ** Auto import components
@@ -57,7 +68,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
   ],
   /*
    ** Axios module configuration
@@ -65,8 +76,17 @@ export default {
    */
   axios: {},
   /*
+   ** Style resources configuration
+   */
+  styleResources: {
+    scss: './assets/scss/style.scss',
+  },
+  /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
+  router: {
+    middleware: 'dashboard',
+  },
 }
